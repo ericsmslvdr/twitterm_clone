@@ -4,6 +4,10 @@ import 'package:navigation_prac/pages/bottom_navbar/messages_page.dart';
 import 'package:navigation_prac/pages/bottom_navbar/notification_page.dart';
 import 'package:navigation_prac/pages/bottom_navbar/search_page.dart';
 import 'package:navigation_prac/pages/bottom_navbar/home_page.dart';
+import 'package:navigation_prac/pages/top_navbar/page_four.dart';
+import 'package:navigation_prac/pages/top_navbar/page_one.dart';
+import 'package:navigation_prac/pages/top_navbar/page_three.dart';
+import 'package:navigation_prac/pages/top_navbar/page_two.dart';
 
 void main() {
   runApp(const MyApp());
@@ -80,22 +84,50 @@ class _MainPageState extends State<MainPage> {
             ListTile(
               title: const Text('Page One'),
               leading: const Icon(Icons.groups),
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) {
+                    return const PageOne();
+                  }),
+                );
+              },
             ),
             ListTile(
               title: const Text('Page Two'),
               leading: const Icon(Icons.ac_unit_rounded),
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) {
+                    return const PageTwo();
+                  }),
+                );
+              },
             ),
             ListTile(
               title: const Text('Page Three'),
               leading: const Icon(Icons.account_circle),
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) {
+                    return const PageThree();
+                  }),
+                );
+              },
             ),
             ListTile(
               title: const Text('Page Four'),
               leading: const Icon(Icons.work_rounded),
-              onTap: () {},
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) {
+                    return const PageFour();
+                  }),
+                );
+              },
             ),
           ],
         ),

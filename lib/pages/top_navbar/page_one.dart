@@ -5,6 +5,16 @@ class PageOne extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Page One'),
+      ),
+      body: const Center(
+        child: Text(
+          'Page One',
+          style: TextStyle(fontSize: 50),
+        ),
+      ),
+    );
   }
 }
