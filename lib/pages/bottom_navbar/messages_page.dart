@@ -11,7 +11,7 @@ class MessagesPage extends StatelessWidget {
       // ),
       body: Center(
         child: Text(
-          'Messages Page',
+          'Message Page',
           style: TextStyle(fontSize: 50),
         ),
       ),

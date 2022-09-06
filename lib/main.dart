@@ -76,20 +76,25 @@ class _MainPageState extends State<MainPage> {
                 ),
               ),
             ),
+            const SizedBox(height: 20),
             ListTile(
               title: const Text('Page One'),
+              leading: const Icon(Icons.groups),
               onTap: () {},
             ),
             ListTile(
-              title: const Text('Page One'),
+              title: const Text('Page Two'),
+              leading: const Icon(Icons.ac_unit_rounded),
               onTap: () {},
             ),
             ListTile(
-              title: const Text('Page One'),
+              title: const Text('Page Three'),
+              leading: const Icon(Icons.account_circle),
               onTap: () {},
             ),
             ListTile(
-              title: const Text('Page One'),
+              title: const Text('Page Four'),
+              leading: const Icon(Icons.work_rounded),
               onTap: () {},
             ),
           ],
