@@ -81,6 +81,7 @@ class _MainPageState extends State<MainPage> {
               title: const Text('Page One'),
               leading: const Icon(Icons.groups),
               onTap: () {
+                Navigator.pop(context);
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) {
@@ -93,6 +94,7 @@ class _MainPageState extends State<MainPage> {
               title: const Text('Page Two'),
               leading: const Icon(Icons.ac_unit_rounded),
               onTap: () {
+                Navigator.pop(context);
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) {
@@ -105,6 +107,7 @@ class _MainPageState extends State<MainPage> {
               title: const Text('Page Three'),
               leading: const Icon(Icons.account_circle),
               onTap: () {
+                Navigator.pop(context);
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) {
@@ -117,6 +120,7 @@ class _MainPageState extends State<MainPage> {
               title: const Text('Page Four'),
               leading: const Icon(Icons.work_rounded),
               onTap: () {
+                Navigator.pop(context);
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) {
