@@ -17,13 +17,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: true,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const MainPage(),
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: MainPage(),
     );
   }
 }
@@ -50,19 +46,25 @@ class _MainPageState extends State<MainPage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.black,
-        title: const Text(
-          'Testing',
-          style: TextStyle(
-            color: Colors.white,
-          ),
-        ),
         leading: Builder(
           builder: (context) => GestureDetector(
-            child: const CircleAvatar(
-              foregroundImage: AssetImage('assets/pic-me.png'),
+            child: const Padding(
+              padding: EdgeInsets.only(left: 20),
+              child: CircleAvatar(
+                foregroundImage: AssetImage('assets/pic-me.png'),
+              ),
             ),
             onTap: () => Scaffold.of(context).openDrawer(),
           ),
+        ),
+        actions: const [
+          Padding(
+            padding: EdgeInsets.only(right: 20),
+            child: Icon(Icons.stream),
+          ),
+        ],
+        flexibleSpace: SafeArea(
+          child: Image.asset('assets/woofer_logo.png'),
         ),
       ),
       drawer: Drawer(
