@@ -11,7 +11,7 @@ class PageTwo extends StatelessWidget {
       ),
       body: const Center(
         child: Text(
-          'Page One',
+          'Page Two',
           style: TextStyle(fontSize: 50),
         ),
       ),

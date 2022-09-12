@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:navigation_prac/pages/bottom_navbar/spaces_page.dart';
-import 'package:navigation_prac/pages/bottom_navbar/messages_page.dart';
-import 'package:navigation_prac/pages/bottom_navbar/notification_page.dart';
-import 'package:navigation_prac/pages/bottom_navbar/search_page.dart';
-import 'package:navigation_prac/pages/bottom_navbar/home_page.dart';
-import 'package:navigation_prac/pages/top_navbar/page_four.dart';
-import 'package:navigation_prac/pages/top_navbar/page_one.dart';
-import 'package:navigation_prac/pages/top_navbar/page_three.dart';
-import 'package:navigation_prac/pages/top_navbar/page_two.dart';
+import 'package:navigation_prac/screens/bottom_navbar/home_screen.dart';
+import 'package:navigation_prac/screens/bottom_navbar/message_screen.dart';
+import 'package:navigation_prac/screens/bottom_navbar/notification_screen.dart';
+import 'package:navigation_prac/screens/bottom_navbar/search_screen.dart';
+import 'package:navigation_prac/screens/top_navbar/page_four.dart';
+import 'package:navigation_prac/screens/top_navbar/page_one.dart';
+import 'package:navigation_prac/screens/top_navbar/page_three.dart';
+import 'package:navigation_prac/screens/top_navbar/page_two.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,6 +18,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: true,
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
@@ -39,47 +39,76 @@ class _MainPageState extends State<MainPage> {
   int currentIndex = 0;
 
   final pages = [
-    const HomePage(),
-    const SearchPage(),
-    const SpacePage(),
-    const NotificationPage(),
-    const MessagesPage(),
+    const HomeScreen(),
+    const SearchScreen(),
+    const NotificationScreen(),
+    const MessageScreen(),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Testing'),
+        backgroundColor: Colors.black,
+        title: const Text(
+          'Testing',
+          style: TextStyle(
+            color: Colors.white,
+          ),
+        ),
+        leading: Builder(
+          builder: (context) => GestureDetector(
+            child: const CircleAvatar(
+              foregroundImage: AssetImage('assets/pic-me.png'),
+            ),
+            onTap: () => Scaffold.of(context).openDrawer(),
+          ),
+        ),
       ),
       drawer: Drawer(
+        backgroundColor: Colors.black,
         child: ListView(
           padding: EdgeInsets.zero,
           children: [
             DrawerHeader(
               decoration: const BoxDecoration(
-                color: Colors.blue,
-              ),
-              child: Center(
-                child: Column(
-                  children: const [
-                    CircleAvatar(
-                      radius: 50,
-                      backgroundImage: ExactAssetImage('assets/pic-me.png'),
-                    ),
-                    Text('Eric Samuel Salvador'),
-                    Text(
-                      'ericsslvdr',
-                      style: TextStyle(color: Colors.black54),
-                    ),
-                  ],
+                border: Border(
+                  bottom: BorderSide(color: Colors.white24),
                 ),
+                color: Colors.black,
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: const [
+                  CircleAvatar(
+                    radius: 30,
+                    foregroundImage: AssetImage('assets/pic-me.png'),
+                  ),
+                  Text(
+                    'Eric Samuel Salvador',
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
+                  ),
+                  Text(
+                    '@ericsslvdr',
+                    style: TextStyle(color: Colors.white54),
+                  ),
+                ],
               ),
             ),
             const SizedBox(height: 20),
             ListTile(
-              title: const Text('Page One'),
-              leading: const Icon(Icons.groups),
+              title: const Text(
+                'Page One',
+                style: TextStyle(
+                  color: Colors.white,
+                ),
+              ),
+              leading: const Icon(
+                Icons.groups,
+                color: Colors.white,
+              ),
               onTap: () {
                 Navigator.pop(context);
                 Navigator.push(
@@ -91,8 +120,16 @@ class _MainPageState extends State<MainPage> {
               },
             ),
             ListTile(
-              title: const Text('Page Two'),
-              leading: const Icon(Icons.ac_unit_rounded),
+              title: const Text(
+                'Page Two',
+                style: TextStyle(
+                  color: Colors.white,
+                ),
+              ),
+              leading: const Icon(
+                Icons.ac_unit_rounded,
+                color: Colors.white,
+              ),
               onTap: () {
                 Navigator.pop(context);
                 Navigator.push(
@@ -104,8 +141,16 @@ class _MainPageState extends State<MainPage> {
               },
             ),
             ListTile(
-              title: const Text('Page Three'),
-              leading: const Icon(Icons.account_circle),
+              title: const Text(
+                'Page Three',
+                style: TextStyle(
+                  color: Colors.white,
+                ),
+              ),
+              leading: const Icon(
+                Icons.account_circle,
+                color: Colors.white,
+              ),
               onTap: () {
                 Navigator.pop(context);
                 Navigator.push(
@@ -117,8 +162,16 @@ class _MainPageState extends State<MainPage> {
               },
             ),
             ListTile(
-              title: const Text('Page Four'),
-              leading: const Icon(Icons.work_rounded),
+              title: const Text(
+                'Page Four',
+                style: TextStyle(
+                  color: Colors.white,
+                ),
+              ),
+              leading: const Icon(
+                Icons.work_rounded,
+                color: Colors.white,
+              ),
               onTap: () {
                 Navigator.pop(context);
                 Navigator.push(
@@ -132,12 +185,13 @@ class _MainPageState extends State<MainPage> {
           ],
         ),
       ),
-      body: pages[currentIndex],
-      // IndexedStack(
-      //   index: currentIndex,
-      //   children: pages,
-      // ),
+      // body: pages[currentIndex],
+      body: IndexedStack(
+        index: currentIndex,
+        children: pages,
+      ),
       bottomNavigationBar: BottomNavigationBar(
+        iconSize: 30,
         backgroundColor: Colors.black,
         selectedItemColor: Colors.blue,
         unselectedItemColor: Colors.grey,
@@ -160,15 +214,11 @@ class _MainPageState extends State<MainPage> {
             label: 'Search',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.spatial_tracking_rounded),
-            label: 'Spaces',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.notifications_rounded),
+            icon: Icon(Icons.notifications_none),
             label: 'Notification',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.mail),
+            icon: Icon(Icons.mail_outline),
             label: 'Messages',
           ),
         ],
