@@ -11,7 +11,7 @@ class Profile extends StatelessWidget {
       ),
       body: const Center(
         child: Text(
-          'Page One',
+          'Profile',
           style: TextStyle(fontSize: 50),
         ),
       ),
