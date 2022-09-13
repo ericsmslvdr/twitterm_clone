@@ -46,7 +46,7 @@ class _MainPageState extends State<MainPage> {
         leading: Builder(
           builder: (context) => GestureDetector(
             child: const Padding(
-              padding: EdgeInsets.only(left: 20),
+              padding: EdgeInsets.only(left: 10),
               child: CircleAvatar(
                 backgroundImage: AssetImage('assets/nu_literates.jpg'),
               ),
@@ -56,7 +56,7 @@ class _MainPageState extends State<MainPage> {
         ),
         actions: const [
           Padding(
-            padding: EdgeInsets.only(right: 20),
+            padding: EdgeInsets.only(right: 10),
             child: Icon(Icons.stream),
           ),
         ],
