@@ -3,10 +3,7 @@ import 'package:navigation_prac/screens/bottom_navbar/home_screen.dart';
 import 'package:navigation_prac/screens/bottom_navbar/message_screen.dart';
 import 'package:navigation_prac/screens/bottom_navbar/notification_screen.dart';
 import 'package:navigation_prac/screens/bottom_navbar/search_screen.dart';
-import 'package:navigation_prac/screens/top_navbar/page_four.dart';
-import 'package:navigation_prac/screens/top_navbar/page_one.dart';
-import 'package:navigation_prac/screens/top_navbar/page_three.dart';
-import 'package:navigation_prac/screens/top_navbar/page_two.dart';
+import 'package:navigation_prac/screens/top_navbar/profile.dart';
 
 void main() {
   runApp(const MyApp());
@@ -51,7 +48,7 @@ class _MainPageState extends State<MainPage> {
             child: const Padding(
               padding: EdgeInsets.only(left: 20),
               child: CircleAvatar(
-                foregroundImage: AssetImage('assets/pic-me.png'),
+                backgroundImage: AssetImage('assets/nu_literates.jpg'),
               ),
             ),
             onTap: () => Scaffold.of(context).openDrawer(),
@@ -84,16 +81,16 @@ class _MainPageState extends State<MainPage> {
                 children: const [
                   CircleAvatar(
                     radius: 30,
-                    foregroundImage: AssetImage('assets/pic-me.png'),
+                    foregroundImage: AssetImage('assets/nu_literates.jpg'),
                   ),
                   Text(
-                    'Eric Samuel Salvador',
+                    'NU Literates',
                     style: TextStyle(
                       color: Colors.white,
                     ),
                   ),
                   Text(
-                    '@ericsslvdr',
+                    '@NULiterates',
                     style: TextStyle(color: Colors.white54),
                   ),
                 ],
@@ -102,13 +99,13 @@ class _MainPageState extends State<MainPage> {
             const SizedBox(height: 20),
             ListTile(
               title: const Text(
-                'Page One',
+                'Profile',
                 style: TextStyle(
                   color: Colors.white,
                 ),
               ),
               leading: const Icon(
-                Icons.groups,
+                Icons.person_outline,
                 color: Colors.white,
               ),
               onTap: () {
@@ -116,73 +113,62 @@ class _MainPageState extends State<MainPage> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) {
-                    return const PageOne();
+                    return const Profile();
                   }),
                 );
               },
             ),
             ListTile(
               title: const Text(
-                'Page Two',
+                'Lists',
                 style: TextStyle(
                   color: Colors.white,
                 ),
               ),
               leading: const Icon(
-                Icons.ac_unit_rounded,
+                Icons.library_books_outlined,
                 color: Colors.white,
               ),
-              onTap: () {
-                Navigator.pop(context);
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) {
-                    return const PageTwo();
-                  }),
-                );
-              },
+              onTap: () {},
             ),
             ListTile(
               title: const Text(
-                'Page Three',
+                'Topics',
                 style: TextStyle(
                   color: Colors.white,
                 ),
               ),
               leading: const Icon(
-                Icons.account_circle,
+                Icons.message_outlined,
                 color: Colors.white,
               ),
-              onTap: () {
-                Navigator.pop(context);
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) {
-                    return const PageThree();
-                  }),
-                );
-              },
+              onTap: () {},
             ),
             ListTile(
               title: const Text(
-                'Page Four',
+                'Woofer Circle',
                 style: TextStyle(
                   color: Colors.white,
                 ),
               ),
               leading: const Icon(
-                Icons.work_rounded,
+                Icons.person_search_outlined,
                 color: Colors.white,
               ),
-              onTap: () {
-                Navigator.pop(context);
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) {
-                    return const PageFour();
-                  }),
-                );
-              },
+              onTap: () {},
+            ),
+            ListTile(
+              title: const Text(
+                'Bookmarks',
+                style: TextStyle(
+                  color: Colors.white,
+                ),
+              ),
+              leading: const Icon(
+                Icons.bookmark_border,
+                color: Colors.white,
+              ),
+              onTap: () {},
             ),
           ],
         ),
