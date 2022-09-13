@@ -32,7 +32,7 @@ class _MainPageState extends State<MainPage> {
   int currentIndex = 0;
 
   final screens = [
-    const HomeScreen(),
+    HomeScreen(),
     const SearchScreen(),
     const NotificationScreen(),
     const MessageScreen(),
