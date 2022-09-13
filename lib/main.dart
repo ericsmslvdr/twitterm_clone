@@ -34,7 +34,7 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> {
   int currentIndex = 0;
 
-  final pages = [
+  final screens = [
     const HomeScreen(),
     const SearchScreen(),
     const NotificationScreen(),
@@ -187,10 +187,10 @@ class _MainPageState extends State<MainPage> {
           ],
         ),
       ),
-      // body: pages[currentIndex],
+      // body: screens[currentIndex],
       body: IndexedStack(
         index: currentIndex,
-        children: pages,
+        children: screens,
       ),
       bottomNavigationBar: BottomNavigationBar(
         iconSize: 30,
