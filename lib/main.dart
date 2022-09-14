@@ -54,12 +54,6 @@ class _MainPageState extends State<MainPage> {
           color: Colors.white,
         ),
       ),
-      // IconButton(
-      //   color: Colors.blue,
-      //   padding: EdgeInsets.all(10),
-      //   onPressed: () {},
-      //   icon: const Icon(Icons.control_point_duplicate_sharp),
-      // ),
       appBar: AppBar(
         backgroundColor: bgColor,
         leading: Builder(
@@ -365,10 +359,6 @@ class _MainPageState extends State<MainPage> {
         ),
       ),
       body: screens[currentIndex],
-      // body: IndexedStack(
-      //   index: currentIndex,
-      //   children: screens,
-      // ),
       bottomNavigationBar: BottomNavigationBar(
         iconSize: 30,
         backgroundColor: bgColor,

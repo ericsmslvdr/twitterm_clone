@@ -27,7 +27,7 @@ class Profile extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     const CircleAvatar(
                       backgroundImage: AssetImage('assets/nu_literates.jpg'),
