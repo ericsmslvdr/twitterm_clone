@@ -15,11 +15,8 @@ class Profile extends StatelessWidget {
           SizedBox(width: 15),
         ],
       ),
-      body: const Center(
-        child: Text(
-          'Profile',
-          style: TextStyle(fontSize: 50),
-        ),
+      body: Column(
+        children: [Image.asset('assets/literates_bg.png')],
       ),
     );
   }

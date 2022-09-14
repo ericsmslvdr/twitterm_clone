@@ -62,7 +62,7 @@ class _MainPageState extends State<MainPage> {
           ),
         ],
         flexibleSpace: SafeArea(
-          child: Image.asset('assets/woofer_logo.png'),
+          child: Image.asset('assets/bulldog.png'),
         ),
       ),
       drawer: Drawer(
