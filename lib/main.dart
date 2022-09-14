@@ -39,9 +39,27 @@ class _MainPageState extends State<MainPage> {
     const MessageScreen(),
   ];
 
+  void click() {}
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: RawMaterialButton(
+        onPressed: () {},
+        fillColor: Colors.blue,
+        shape: const CircleBorder(),
+        padding: const EdgeInsets.all(15),
+        child: const Icon(
+          Icons.control_point_duplicate_sharp,
+          color: Colors.white,
+        ),
+      ),
+      // IconButton(
+      //   color: Colors.blue,
+      //   padding: EdgeInsets.all(10),
+      //   onPressed: () {},
+      //   icon: const Icon(Icons.control_point_duplicate_sharp),
+      // ),
       appBar: AppBar(
         backgroundColor: bgColor,
         leading: Builder(
@@ -73,8 +91,8 @@ class _MainPageState extends State<MainPage> {
             SizedBox(
               height: 220,
               child: DrawerHeader(
-                decoration: BoxDecoration(
-                  border: const Border(
+                decoration: const BoxDecoration(
+                  border: Border(
                     bottom: BorderSide(color: Colors.white24),
                   ),
                   color: bgColor,
@@ -346,11 +364,11 @@ class _MainPageState extends State<MainPage> {
           ],
         ),
       ),
-      // body: screens[currentIndex],
-      body: IndexedStack(
-        index: currentIndex,
-        children: screens,
-      ),
+      body: screens[currentIndex],
+      // body: IndexedStack(
+      //   index: currentIndex,
+      //   children: screens,
+      // ),
       bottomNavigationBar: BottomNavigationBar(
         iconSize: 30,
         backgroundColor: bgColor,
