@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.navigation_prac">
+    package="com.example.twitterm_clone">
    <application
         android:label="Twitter Clone"
         android:name="${applicationName}"

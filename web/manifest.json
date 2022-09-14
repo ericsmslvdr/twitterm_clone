@@ -1,6 +1,6 @@
 {
-    "name": "navigation_prac",
-    "short_name": "navigation_prac",
+    "name": "twitterm_clone",
+    "short_name": "twitterm_clone",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

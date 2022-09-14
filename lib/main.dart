@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:navigation_prac/const.dart';
-import 'package:navigation_prac/screens/bottom_navbar/home_screen.dart';
-import 'package:navigation_prac/screens/bottom_navbar/message_screen.dart';
-import 'package:navigation_prac/screens/bottom_navbar/notification_screen.dart';
-import 'package:navigation_prac/screens/bottom_navbar/search_screen.dart';
-import 'package:navigation_prac/screens/top_navbar/profile.dart';
+import 'package:twitterm_clone/const.dart';
+import 'package:twitterm_clone/screens/bottom_navbar/home_screen.dart';
+import 'package:twitterm_clone/screens/bottom_navbar/message_screen.dart';
+import 'package:twitterm_clone/screens/bottom_navbar/notification_screen.dart';
+import 'package:twitterm_clone/screens/bottom_navbar/search_screen.dart';
+import 'package:twitterm_clone/screens/top_navbar/profile.dart';
 
 void main() {
   runApp(const MyApp());

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:navigation_prac/const.dart';
-import 'package:navigation_prac/posts/post.dart';
+import 'package:twitterm_clone/const.dart';
+import 'package:twitterm_clone/posts/post.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});

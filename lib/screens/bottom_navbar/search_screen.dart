@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:navigation_prac/const.dart';
+import 'package:twitterm_clone/const.dart';
 
 class SearchScreen extends StatelessWidget {
   const SearchScreen({super.key});

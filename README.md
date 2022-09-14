@@ -1,4 +1,4 @@
-# navigation_prac
+# twitterm_clone
 
 Sample navigation bar.
 

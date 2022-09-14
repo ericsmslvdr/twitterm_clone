@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:navigation_prac/const.dart';
+import 'package:twitterm_clone/const.dart';
 
 class MessageScreen extends StatelessWidget {
   const MessageScreen({super.key});

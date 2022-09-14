@@ -1,4 +1,4 @@
-package com.example.navigation_prac
+package com.example.twitterm_clone
 
 import io.flutter.embedding.android.FlutterActivity
 
