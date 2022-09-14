@@ -39,8 +39,6 @@ class _MainPageState extends State<MainPage> {
     const MessageScreen(),
   ];
 
-  void click() {}
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -59,7 +57,7 @@ class _MainPageState extends State<MainPage> {
         leading: Builder(
           builder: (context) => GestureDetector(
             child: const Padding(
-              padding: EdgeInsets.only(left: 10),
+              padding: EdgeInsets.only(left: 15),
               child: CircleAvatar(
                 backgroundImage: AssetImage('assets/nu_literates.jpg'),
               ),
