@@ -43,7 +43,7 @@ class _MainPageState extends State<MainPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(bgColor),
+        backgroundColor: bgColor,
         leading: Builder(
           builder: (context) => GestureDetector(
             child: const Padding(
@@ -66,7 +66,7 @@ class _MainPageState extends State<MainPage> {
         ),
       ),
       drawer: Drawer(
-        backgroundColor: Color(bgColor),
+        backgroundColor: bgColor,
         child: ListView(
           padding: EdgeInsets.zero,
           children: [
@@ -77,7 +77,7 @@ class _MainPageState extends State<MainPage> {
                   border: const Border(
                     bottom: BorderSide(color: Colors.white24),
                   ),
-                  color: Color(bgColor),
+                  color: bgColor,
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -353,7 +353,7 @@ class _MainPageState extends State<MainPage> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         iconSize: 30,
-        backgroundColor: Color(bgColor),
+        backgroundColor: bgColor,
         selectedItemColor: Colors.blue,
         unselectedItemColor: Colors.grey,
         selectedFontSize: 0,

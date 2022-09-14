@@ -1,3 +1,4 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
-var bgColor = 0xFF15202B;
+const bgColor = Color(0xFF15202B);

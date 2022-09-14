@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:navigation_prac/const.dart';
 
 class Profile extends StatelessWidget {
   const Profile({super.key});
@@ -7,7 +8,7 @@ class Profile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
+        backgroundColor: bgColor,
         actions: const [
           Icon(Icons.search),
           SizedBox(width: 10),
@@ -16,7 +17,9 @@ class Profile extends StatelessWidget {
         ],
       ),
       body: Column(
-        children: [Image.asset('assets/literates_bg.png')],
+        children: [
+          Image.asset('assets/literates_bg.png'),
+        ],
       ),
     );
   }
