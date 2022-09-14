@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:navigation_prac/const.dart';
 
 class MessageScreen extends StatelessWidget {
   const MessageScreen({super.key});
@@ -6,7 +7,7 @@ class MessageScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Color(bgColor),
       body: Container(
         decoration: const BoxDecoration(
           border: Border.symmetric(
@@ -17,8 +18,8 @@ class MessageScreen extends StatelessWidget {
         ),
         child: const Center(
           child: Text(
-            'Message Screen',
-            style: TextStyle(fontSize: 50, color: Colors.white),
+            'Messages',
+            style: TextStyle(fontSize: 30, color: Colors.white),
           ),
         ),
       ),

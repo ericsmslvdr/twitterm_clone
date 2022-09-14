@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:navigation_prac/const.dart';
 import 'package:navigation_prac/posts/post.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -7,7 +8,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Color(bgColor),
       body: Container(
         decoration: const BoxDecoration(
           border: Border.symmetric(

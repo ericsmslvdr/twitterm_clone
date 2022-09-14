@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:navigation_prac/const.dart';
 
 class SearchScreen extends StatelessWidget {
   const SearchScreen({super.key});
@@ -6,7 +7,7 @@ class SearchScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Color(bgColor),
       body: Container(
         decoration: const BoxDecoration(
           border: Border.symmetric(
@@ -17,8 +18,8 @@ class SearchScreen extends StatelessWidget {
         ),
         child: const Center(
           child: Text(
-            'Search Screen',
-            style: TextStyle(fontSize: 50, color: Colors.white),
+            'Search',
+            style: TextStyle(fontSize: 30, color: Colors.white),
           ),
         ),
       ),

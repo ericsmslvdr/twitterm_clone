@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:navigation_prac/const.dart';
 import 'package:navigation_prac/screens/bottom_navbar/home_screen.dart';
 import 'package:navigation_prac/screens/bottom_navbar/message_screen.dart';
 import 'package:navigation_prac/screens/bottom_navbar/notification_screen.dart';
@@ -32,7 +33,7 @@ class _MainPageState extends State<MainPage> {
   int currentIndex = 0;
 
   final screens = [
-    HomeScreen(),
+    const HomeScreen(),
     const SearchScreen(),
     const NotificationScreen(),
     const MessageScreen(),
@@ -42,7 +43,7 @@ class _MainPageState extends State<MainPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.black,
+        backgroundColor: Color(bgColor),
         leading: Builder(
           builder: (context) => GestureDetector(
             child: const Padding(
@@ -65,18 +66,18 @@ class _MainPageState extends State<MainPage> {
         ),
       ),
       drawer: Drawer(
-        backgroundColor: Colors.black,
+        backgroundColor: Color(bgColor),
         child: ListView(
           padding: EdgeInsets.zero,
           children: [
             SizedBox(
               height: 220,
               child: DrawerHeader(
-                decoration: const BoxDecoration(
-                  border: Border(
+                decoration: BoxDecoration(
+                  border: const Border(
                     bottom: BorderSide(color: Colors.white24),
                   ),
-                  color: Colors.black,
+                  color: Color(bgColor),
                 ),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -352,7 +353,7 @@ class _MainPageState extends State<MainPage> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         iconSize: 30,
-        backgroundColor: Colors.black,
+        backgroundColor: Color(bgColor),
         selectedItemColor: Colors.blue,
         unselectedItemColor: Colors.grey,
         selectedFontSize: 0,

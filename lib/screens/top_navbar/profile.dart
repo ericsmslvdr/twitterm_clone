@@ -7,7 +7,13 @@ class Profile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Page One'),
+        backgroundColor: Colors.transparent,
+        actions: const [
+          Icon(Icons.search),
+          SizedBox(width: 10),
+          Icon(Icons.menu),
+          SizedBox(width: 15),
+        ],
       ),
       body: const Center(
         child: Text(

@@ -21,7 +21,6 @@ class Post extends StatelessWidget {
     return Container(
       constraints: const BoxConstraints(minHeight: 100),
       decoration: const BoxDecoration(
-        // color: Colors.white10,
         border: Border(
           bottom: BorderSide(color: Colors.white24),
         ),
@@ -67,8 +66,11 @@ class Post extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 10),
-                    Image.asset(
-                      imagePost,
+                    ClipRRect(
+                      borderRadius: BorderRadius.circular(15),
+                      child: Image.asset(
+                        imagePost,
+                      ),
                     )
                   ],
                 ),
