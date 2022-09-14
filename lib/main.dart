@@ -199,7 +199,7 @@ class _MainPageState extends State<MainPage> {
             ),
             ListTile(
               title: const Text(
-                'Woofer Circle',
+                'Twitter Circle',
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 18,
@@ -279,7 +279,7 @@ class _MainPageState extends State<MainPage> {
             ),
             ListTile(
               title: const Text(
-                'Woofer for Professionals',
+                'Twitter for Professionals',
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 18,

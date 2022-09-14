@@ -6,6 +6,9 @@ class Post extends StatelessWidget {
   final String userInfo;
   final String textContent;
   final String imagePost;
+  final String comments;
+  final String retweets;
+  final String likes;
 
   const Post({
     super.key,
@@ -14,6 +17,9 @@ class Post extends StatelessWidget {
     required this.textContent,
     required this.imagePost,
     required this.userName,
+    required this.comments,
+    required this.retweets,
+    required this.likes,
   });
 
   @override
@@ -71,7 +77,53 @@ class Post extends StatelessWidget {
                       child: Image.asset(
                         imagePost,
                       ),
-                    )
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(0, 10, 20, 0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          const Icon(
+                            Icons.chat_bubble_outline,
+                            color: Colors.white54,
+                          ),
+                          Text(
+                            comments,
+                            style: const TextStyle(
+                              color: Colors.white54,
+                            ),
+                          ),
+                          const SizedBox(width: 10),
+                          const Icon(
+                            Icons.compare_arrows,
+                            color: Colors.white54,
+                          ),
+                          Text(
+                            retweets,
+                            style: const TextStyle(
+                              color: Colors.white54,
+                            ),
+                          ),
+                          const SizedBox(width: 10),
+                          const Icon(
+                            Icons.handshake,
+                            color: Colors.white54,
+                          ),
+                          Text(
+                            likes,
+                            style: const TextStyle(
+                              color: Colors.white54,
+                            ),
+                          ),
+                          const SizedBox(width: 10),
+                          const Icon(
+                            Icons.share_outlined,
+                            color: Colors.white54,
+                          ),
+                          const SizedBox(width: 10),
+                        ],
+                      ),
+                    ),
                   ],
                 ),
               ),
