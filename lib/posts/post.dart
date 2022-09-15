@@ -21,7 +21,6 @@ class Post extends StatelessWidget {
     required this.retweets,
     required this.likes,
   });
-
   @override
   Widget build(BuildContext context) {
     return Container(

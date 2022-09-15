@@ -30,7 +30,7 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
-  int currentIndex = 0;
+  int currIndex = 0;
 
   final screens = [
     const HomeScreen(),
@@ -38,7 +38,6 @@ class _MainPageState extends State<MainPage> {
     const NotificationScreen(),
     const MessageScreen(),
   ];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -57,7 +56,7 @@ class _MainPageState extends State<MainPage> {
         leading: Builder(
           builder: (context) => GestureDetector(
             child: const Padding(
-              padding: EdgeInsets.only(left: 15),
+              padding: EdgeInsets.only(left: 10),
               child: CircleAvatar(
                 backgroundImage: AssetImage('assets/nu_literates.jpg'),
               ),
@@ -356,7 +355,7 @@ class _MainPageState extends State<MainPage> {
           ],
         ),
       ),
-      body: screens[currentIndex],
+      body: screens[currIndex],
       bottomNavigationBar: BottomNavigationBar(
         iconSize: 30,
         backgroundColor: bgColor,
@@ -365,10 +364,10 @@ class _MainPageState extends State<MainPage> {
         selectedFontSize: 0,
         unselectedFontSize: 0,
         type: BottomNavigationBarType.fixed,
-        currentIndex: currentIndex,
+        currentIndex: currIndex,
         onTap: (index) {
           setState(() {
-            currentIndex = index;
+            currIndex = index;
           });
         },
         items: const [
